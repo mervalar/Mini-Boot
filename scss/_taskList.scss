@@ -1,0 +1,21 @@
+.tab-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.tab-list li {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: lightgray;
+}
+.tab-list li.active {
+    background: darkgray;
+}
+.tab-pane {
+    display: none;
+    padding: 10px;
+    background: white;
+}
+.tab-pane.active {
+    display: block;
+}

@@ -1,0 +1,29 @@
+$colors : (
+    primary: #007bff,
+    success: #28a745,
+    info: #0dcaf0,
+    warning: #ffc107,
+    error: #dc3545,
+    muted: #6c757d,
+);
+$background : (
+    primary: #007bff,
+    success: #28a745,
+    info: #17a2b8,
+    warning: #ffc107,
+    error: #dc3545,
+    muted: #6c757d,
+);
+
+
+@each $name, $value in $colors {
+    .text-#{$name} {
+        color: $value;
+    }
+}
+@each $name, $value in $colors {
+    .bg-#{$name} {
+        padding: 5px;
+        background-color: $value;
+    }
+}

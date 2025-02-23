@@ -1,0 +1,9 @@
+.code-snippet {
+    background: #f0f2f3; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-family: monospace; 
+    white-space: pre; 
+    display: block; 
+    overflow-x: auto;
+}

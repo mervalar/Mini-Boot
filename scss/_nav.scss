@@ -1,0 +1,98 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$bg-color: #ffffff;
+$primary-color: #007bff;
+$text-color: #333;
+$dropdown-bg: #f8f9fa;
+$dropdown-hover: #e9ecef;
+
+.navbar {
+  display: flex;
+  flex-direction: column; // Stack items vertically on small screens
+  align-items: flex-start;
+  background: $bg-color;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 10px; // Add spacing between brand and links
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column; // Stack links vertically
+    gap: 10px; // Add spacing between links
+    width: 100%; // Take full width
+
+    .nav-item {
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        padding: 10px 15px;
+        display: block;
+      }
+
+      &:hover .dropdown-menu {
+        display: block;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: static; // Display dropdown below the parent link
+      background: $dropdown-bg;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      min-width: 150px;
+      border-radius: 5px;
+      margin-top: 5px; // Add spacing between parent link and dropdown
+      
+      li {
+        list-style: none;
+        
+        a {
+          padding: 10px;
+          display: block;
+          
+          &:hover {
+            background: $dropdown-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles for larger screens
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row; // Align items horizontally on larger screens
+    align-items: center;
+
+    .nav-brand {
+      margin-bottom: 0; // Remove spacing between brand and links
+    }
+
+    .nav-links {
+      flex-direction: row; // Align links horizontally
+      gap: 20px; // Add spacing between links
+
+      .dropdown-menu {
+        position: absolute; // Display dropdown below the parent link
+        top: 100%;
+        left: 0;
+      }
+    }
+  }
+}

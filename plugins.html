@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Mini Boot</div>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item">
+            <a href="#">Services▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">SEO</a></li>
+              <li><a href="#">Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+      <div class="container col-6 mt-4">
+         <!-- BUTTON PLUGIN -->
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('buttons-plugin')">Buttons ▼</h2>
+    <div id="buttons-plugin" class="plugin-content">
+        <p>Customize size, shape, hover effects, and colors.</p>
+
+        <div class="mb-2">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-success">Success Button</button>
+            <button class="btn btn-danger">Danger Button</button>
+            <button class="btn btn-warning">Warning Button</button>
+            <button class="btn btn-primary btn-lg">Large Button</button>
+            <button class="btn btn-primary btn-sm">Small Button</button>
+            <button class="btn btn-secondary disabled">Disabled Button</button>
+        </div>
+
+        <p>Use this HTML code:</p>
+        <pre class="code-snippet">
+    &lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+    &lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+    &lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+    &lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+    &lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+    &lt;button class="btn btn-secondary disabled"&gt;Disabled&lt;/button&gt;
+        </pre>
+    </div>
+</div>
+
+        <!-- BUTTON POPPING -->
+    <div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('buttons-plugin')">Buttons ▼</h2>
+    <div id="buttons-plugin" class="plugin-content">
+        <p>Customize size, shape, hover effects, and colors.</p>
+        <div class="mb-2">
+                <button data-target="#my-popin" class="btn btn-error popin-trigger">Open Popover</button>
+                <div class="modal" id="my-popin">
+                    <div class="modal-content">
+                        <span class="popin-dismiss">&times;</span>
+                        <p>Greetings, one and all!</p>
+                    </div>
+                </div>
+            </div>
+        
+        <p>Use this HTML code:</p>
+    <pre class="code-snippet">
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Error&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Active&lt;/button&gt;
+&lt;button class="btn btn-secondary disabled"&gt;Disabled&lt;/button&gt;
+            </pre>
+        </div>
+    </div>
+<!-- ALERT PLUGIN -->
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('alerts-plugin')">Alerts ▼</h2>
+    <div id="alerts-plugin" class="plugin-content">
+        <p>Show important messages with different alert styles.</p>
+
+        <div class="alert alert-success">
+            <strong>Success!</strong> Your action was successful.
+            <span class="alert"></span>
+        </div>
+
+        <div class="alert alert-info">
+            <strong>Info:</strong> This is an informational message.
+            <span class="alert-close" onclick="closeAlert(this)">&times;</span>
+        </div>
+
+        <div class="alert alert-warning">
+            <strong>Warning!</strong> Please be cautious.
+            <span class="alert-close" onclick="closeAlert(this)">&times;</span>
+        </div>
+
+        <div class="alert alert-danger">
+            <strong>Error!</strong> Something went wrong.
+            <span class="alert-close" onclick="closeAlert(this)">&times;</span>
+        </div>
+
+        <p>Use this HTML code:</p>
+        <pre class="code-snippet">
+    &lt;div class="alert alert-success"&gt;
+        &lt;strong&gt;Success!&lt;/strong&gt; Your action was successful.
+        &lt;span class="alert" &gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-info"&gt;
+        &lt;strong&gt;Info:&lt;/strong&gt; This is an informational message.
+        &lt;span class="alert-close" onclick="closeAlert(this)"&gt;&times;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-warning"&gt;
+        &lt;strong&gt;Warning!&lt;/strong&gt; Please be cautious.
+        &lt;span class="alert-close" onclick="closeAlert(this)"&gt;&times;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="alert alert-danger"&gt;
+        &lt;strong&gt;Error!&lt;/strong&gt; Something went wrong.
+        &lt;span class="alert-close" onclick="closeAlert(this)"&gt;&times;&lt;/span&gt;
+    &lt;/div&gt;
+        </pre>
+    </div>
+</div>
+
+        
+<!-- Text Color Plugin -->
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('text-color-plugin')">Text Color ▼</h2>
+    <div id="text-color-plugin" class="plugin-content">
+        <p>Use these classes to change text colors.</p>
+        <div class="mb-2">
+            <p class="text-primary">This is primary text.</p>
+            <p class="text-success">This is success text.</p>
+            <p class="text-error">This is error text.</p>
+            <p class="text-info">This is info text.</p>
+            <p class="text-warning">This is warning text.</p>
+            <p class="text-muted">This is muted text.</p>
+        </div>
+        <p>Use this HTML code:</p>
+        <pre class="code-snippet">
+    &lt;p class="text-primary"&gt;This is primary text.&lt;/p&gt;
+    &lt;p class="text-success"&gt;This is success text.&lt;/p&gt;
+    &lt;p class="text-error"&gt;This is error text.&lt;/p&gt;
+    &lt;p class="text-info"&gt;This is info text.&lt;/p&gt;
+    &lt;p class="text-warning"&gt;This is warning text.&lt;/p&gt;
+    &lt;p class="text-muted"&gt;This is muted text.&lt;/p&gt;
+        </pre>
+    </div>
+</div>
+
+<!-- Background Color Plugin -->
+<div class="card p-3 mt-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('bg-color-plugin')">Background Color ▼</h2>
+    <div id="bg-color-plugin" class="plugin-content">
+        <p>Use these classes to change background colors.</p>
+        <div class="mb-2">
+            <p class="bg-primary text-white p-2">This is primary background.</p>
+            <p class="bg-success text-white p-2">This is success background.</p>
+            <p class="bg-error text-white p-2">This is error background.</p>
+            <p class="bg-info text-white p-2">This is info background.</p>
+            <p class="bg-warning text-dark p-2">This is warning background.</p>
+            <p class="bg-muted text-dark p-2">This is muted background.</p>
+        </div>
+        <p>Use this HTML code:</p>
+        <pre class="code-snippet">
+    &lt;p class="bg-primary text-white p-2"&gt;This is primary background.&lt;/p&gt;
+    &lt;p class="bg-success text-white p-2"&gt;This is success background.&lt;/p&gt;
+    &lt;p class="bg-error text-white p-2"&gt;This is error background.&lt;/p&gt;
+    &lt;p class="bg-info text-white p-2"&gt;This is info background.&lt;/p&gt;
+    &lt;p class="bg-warning text-dark p-2"&gt;This is warning background.&lt;/p&gt;
+    &lt;p class="bg-muted text-dark p-2"&gt;This is muted background.&lt;/p&gt;
+        </pre>
+    </div>
+</div>
+<!-- Container Plugin -->
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('container-plugin')">Container ▼</h2>
+    <div id="container-plugin" class="plugin-content">
+        <p>The <code>.container</code> class provides a fixed-width layout, centered on the page.</p>
+
+        <h3>Example:</h3>
+        <div class="container border p-2">
+            <div class="row">
+                <div class="col-4 p-3 text-center" style="background: lightblue;">Column 1</div>
+                <div class="col-4 p-3 text-center" style="background: lightcoral;">Column 2</div>
+                <div class="col-3 p-3 text-center" style="background: lightblue;">Column 3</div>
+            </div>
+        </div>
+
+        <p>Use this HTML code:</p>
+        <pre class="code-snippet">
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-4" style="background: lightblue;"&gt;Column 1&lt;/div&gt;
+            &lt;div class="col-4" style="background: lightcoral;"&gt;Column 2&lt;/div&gt;
+            &lt;div class="col-3" style="background: lightblue;"&gt;Column 3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+    </div>
+</div>
+<!-- Container-Fluid Plugin -->
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('container-fluid-plugin')">Container-Fluid ▼</h2>
+    <div id="container-fluid-plugin" class="plugin-content">
+        <p>The <code>.container-fluid</code> class provides a full-width layout, spanning the entire viewport.</p>
+
+        <h3>Example:</h3>
+        <div class="container-fluid border p-2">
+            <div class="row">
+                <div class="col-6 p-3 text-center" style="background: lightblue;">Column 1</div>
+                <div class="col-6 p-3 text-center" style="background: lightcoral;">Column 2</div>
+            </div>
+        </div>
+
+        <p>Use this HTML code:</p>
+        <pre class="code-snippet">
+    &lt;div class="container-fluid"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-6" style="background: lightblue;"&gt;Column 1&lt;/div&gt;
+            &lt;div class="col-6" style="background: lightcoral;"&gt;Column 2&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+    </div>
+</div>
+<!-- Image Plugins Page -->
+<div class="container">
+    <!-- Image Responsive Plugin -->
+    <div class="card p-3">
+        <h2 class="dropdown-title" onclick="toggleDropdown('image-responsive-plugin')">Image Responsive ▼</h2>
+        <div id="image-responsive-plugin" class="plugin-content">
+            <p>The <code>.img-responsive</code> class makes the image responsive, meaning it will adjust its size based on the viewport width.</p>
+
+            <h3>Example:</h3>
+            <img src="https://placehold.co/600x400" alt="LED" class="img-responsive" style="width: 100%; height: auto;">
+
+            <p>Use this HTML code:</p>
+            <pre class="code-snippet">
+    &lt;img src="https://placehold.co/600x400" alt="LED" class="img-responsive"&gt;
+            </pre>
+        </div>
+    </div>
+
+    <!-- Image Rounded Plugin -->
+    <div class="card p-3">
+        <h2 class="dropdown-title" onclick="toggleDropdown('image-rounded-plugin')">Image Rounded ▼</h2>
+        <div id="image-rounded-plugin" class="plugin-content">
+            <p>The <code>.img-rounded</code> class gives the image rounded corners.</p>
+
+            <h3>Example:</h3>
+            <img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-rounded" style="width: 100%; height: auto;">
+
+            <p>Use this HTML code:</p>
+            <pre class="code-snippet">
+    &lt;img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-rounded"&gt;
+            </pre>
+        </div>
+    </div>
+
+    <!-- Image Circle Plugin -->
+    <div class="card p-3">
+        <h2 class="dropdown-title" onclick="toggleDropdown('image-circle-plugin')">Image Circle ▼</h2>
+        <div id="image-circle-plugin" class="plugin-content">
+            <p>The <code>.img-circle</code> class makes the image a perfect circle.</p>
+
+            <h3>Example:</h3>
+            <img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-circle" style="width: 100px; height: 100px; object-fit: cover;">
+
+            <p>Use this HTML code:</p>
+            <pre class="code-snippet">
+    &lt;img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-circle"&gt;
+            </pre>
+        </div>
+    </div>
+
+    <!-- Image Thumbnail Plugin -->
+    <div class="card p-3">
+        <h2 class="dropdown-title" onclick="toggleDropdown('image-thumbnail-plugin')">Image Thumbnail ▼</h2>
+        <div id="image-thumbnail-plugin" class="plugin-content">
+            <p>The <code>.img-thumbnail</code> class adds a border around the image, making it look like a thumbnail.</p>
+
+            <h3>Example:</h3>
+            <img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-thumbnail" style="width: 100%; height: auto;">
+
+            <p>Use this HTML code:</p>
+            <pre class="code-snippet">
+    &lt;img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-thumbnail"&gt;
+            </pre>
+        </div>
+    </div>
+
+    <!-- Image Blur Plugin -->
+    <div class="card p-3">
+        <h2 class="dropdown-title" onclick="toggleDropdown('image-blur-plugin')">Image Blur ▼</h2>
+        <div id="image-blur-plugin" class="plugin-content">
+            <p>The <code>.img-blur</code> class applies a blur effect to the image.</p>
+
+            <h3>Example:</h3>
+            <img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-blur" style="width: 100%; height: auto;">
+
+            <p>Use this HTML code:</p>
+            <pre class="code-snippet">
+    &lt;img src="https://placehold.co/600x400" alt="LED" class="img-responsive img-blur"&gt;
+            </pre>
+        </div>
+    </div>
+</div>
+
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('visibility-plugin')">Visibility Test ▼</h2>
+    <div id="visibility-plugin" class="plugin-content">
+        <p>Control visibility of elements on different screen sizes and print media.</p>
+
+        <!-- Example for visibility classes -->
+        <div class="box visible-xs">Visible on extra small screens (xs)</div>
+        <div class="box visible-sm">Visible on small screens (sm) and larger</div>
+        <div class="box visible-md">Visible on medium screens (md) and larger</div>
+        <div class="box visible-lg">Visible on large screens (lg) and larger</div>
+        <div class="box visible-xl">Visible on extra-large screens (xl) and larger</div>
+
+        <!-- Example for hidden classes -->
+        <div class="box hidden-xs">Hidden on extra small screens (xs)</div>
+        <div class="box hidden-sm">Hidden on small screens (sm) and larger</div>
+        <div class="box hidden-md">Hidden on medium screens (md) and larger</div>
+        <div class="box hidden-lg">Hidden on large screens (lg) and larger</div>
+        <div class="box hidden-xl">Hidden on extra-large screens (xl) and larger</div>
+
+        <!-- Example for print classes -->
+        <div class="box visible-print">Visible only when printed</div>
+        <div class="box hidden-print">Hidden when printed</div>
+
+        <p>Use this HTML code:</p>
+        <pre class="code-snippet">
+&lt;div class="box visible-xs"&gt;Visible on extra small screens (xs)&lt;/div&gt;
+&lt;div class="box visible-sm"&gt;Visible on small screens (sm) and larger&lt;/div&gt;
+&lt;div class="box visible-md"&gt;Visible on medium screens (md) and larger&lt;/div&gt;
+&lt;div class="box visible-lg"&gt;Visible on large screens (lg) and larger&lt;/div&gt;
+&lt;div class="box visible-xl"&gt;Visible on extra-large screens (xl) and larger&lt;/div&gt;
+
+&lt;div class="box hidden-xs"&gt;Hidden on extra small screens (xs)&lt;/div&gt;
+&lt;div class="box hidden-sm"&gt;Hidden on small screens (sm) and larger&lt;/div&gt;
+&lt;div class="box hidden-md"&gt;Hidden on medium screens (md) and larger&lt;/div&gt;
+&lt;div class="box hidden-lg"&gt;Hidden on large screens (lg) and larger&lt;/div&gt;
+&lt;div class="box hidden-xl"&gt;Hidden on extra-large screens (xl) and larger&lt;/div&gt;
+
+&lt;div class="box visible-print"&gt;Visible only when printed&lt;/div&gt;
+&lt;div class="box hidden-print"&gt;Hidden when printed&lt;/div&gt;
+        </pre>
+    </div>
+</div>
+<!-- Tab-list -->
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('visibility-plugin')">Tab list ▼</h2>
+<!-- Tab-content -->
+<ul class="tab-list">
+    <li data-target="#tab1" class="active">Tab 1</li>
+    <li data-target="#tab2">Tab 2</li>
+</ul>
+<div class="tab-content">
+    <div id="tab1" class="tab-pane active">
+        <p>Contenu de l'onglet 1</p>
+        <ul class="tab-list">
+            <li data-target="#subtab1" class="active">Sous-onglet 1</li>
+            <li data-target="#subtab2">Sous-onglet 2</li>
+        </ul>
+        <div class="tab-content">
+            <div id="subtab1" class="tab-pane active">Contenu du sous-onglet 1</div>
+            <div id="subtab2" class="tab-pane">Contenu du sous-onglet 2</div>
+        </div>
+    </div>
+    <div id="tab2" class="tab-pane">
+        <p>Contenu de l'onglet 2</p>
+    </div>
+</div>
+
+<p>Use this HTML code:</p>
+<pre class="code-snippet">
+&lt;ul class="tab-list"&gt;
+    &lt;li data-target="#tab1" class="active"&gt;Tab 1&lt;/li&gt;
+    &lt;li data-target="#tab2"&gt;Tab 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+    &lt;div id="tab1" class="tab-pane active"&gt;
+        &lt;p&gt;Content of Tab 1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="tab2" class="tab-pane"&gt;
+        &lt;p&gt;Content of Tab 2&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+        </pre>
+    </div>
+
+    <!-- Tooltip Example -->
+<div class="card p-3">
+    <h2 class="dropdown-title" onclick="toggleDropdown('image-blur-plugin')">Tooltip ▼</h2>
+        
+    <button class="tooltip" title="This is a tooltip" data-placement="top">Hover me (Top)</button>
+    <button class="tooltip" title="This is another tooltip" data-placement="right">Hover me (Right)</button>
+    <button class="tooltip" title="Tooltip on the left" data-placement="left">Hover me (Left)</button>
+    <button class="tooltip" title="Tooltip below" data-placement="bottom">Hover me (Bottom)</button>
+  
+    <div class="tooltip" title="Tooltip on a div!" data-placement="top">Hover over this div</div>
+    <p>Use this HTML code:</p>
+    <pre class="code-snippet">
+&lt;button class="tooltip-btn" data-tooltip="This is a tooltip" data-placement="top"&gt;Hover me (Top)&lt;/button&gt;
+&lt;button class="tooltip-btn" data-tooltip="Tooltip on the right" data-placement="right"&gt;Hover me (Right)&lt;/button&gt;
+&lt;div class="tooltip-div" data-tooltip="Tooltip on a div!" data-placement="top"&gt;Hover over this div&lt;/div&gt;
+
+        </pre>
+    </div>
+</div>
+</div>
+</div>
+</main>
+      <script src="script/main.js"></script>
+
+</body>
+</html>

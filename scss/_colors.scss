@@ -1,0 +1,60 @@
+// Variables de couleurs
+$primary: #007bff;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$disabled: #6c757d;
+
+// Mixins pour styles des boutons
+@mixin button-style($bg-color) {
+    background-color: $bg-color;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &.disabled {
+        background-color: $disabled;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+}
+
+// Boutons avec différentes couleurs
+.btn-primary {
+    @include button-style($primary);
+}
+
+.btn-success {
+    @include button-style($success);
+}
+
+.btn-danger {
+    @include button-style($danger);
+}
+
+.btn-warning {
+    @include button-style($warning);
+}
+
+// Tailles des boutons
+.btn-sm {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.btn-lg {
+    font-size: 20px;
+    padding: 15px 20px;
+}

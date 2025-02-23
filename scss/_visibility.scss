@@ -1,0 +1,26 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+@each $name, $size in $breakpoints {
+    @media (min-width: #{$size}) {
+    .visible-#{$name} {
+    display: block !important;
+    }
+    .hidden-#{$name} {
+    display: none !important;
+    }
+}
+}
+
+@media print {
+.visible-print {
+    display: block !important;
+}
+.hidden-print {
+    display: none !important;
+}
+}
